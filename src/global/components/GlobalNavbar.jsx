@@ -9,7 +9,7 @@ export const GlobalNavbar = () => {
       </h1>
       <ul>
         <li>
-          <Link to={'/app/home'}>Home</Link>
+          <Link to={'/landing/home'}>Home</Link>
         </li>
         <li>
           <Link to={'/landing/about'}>About</Link>
