@@ -94,6 +94,26 @@ export const AddField = () => {
                 },
               })}></TextField>
           </Box>
+          <Box>
+            <TextField
+              variant='outlined'
+              type='text'
+              placeholder='Primaria o Secundaria'
+              label='tipo información'
+              sx={{
+                mt: 2,
+                mb: 2,
+              }}
+              error={!!errors?.value}
+              helperText={errors?.value ? errors.value.message : null}
+              {...register('value', {
+                required: 'Este campo es obligatorio',
+                min: {
+                  value: 4,
+                  message: 'Este campo debe contener al menos 4 caractéres',
+                },
+              })}></TextField>
+          </Box>
 
           <Button variant='outlined' type='submit'>
             Save
