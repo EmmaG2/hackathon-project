@@ -1,4 +1,4 @@
-import {Box} from '@mui/material'
+import {Box, Typography} from '@mui/material'
 import React from 'react'
 import {Link} from 'react-router-dom'
 
@@ -10,9 +10,17 @@ export const GlobalNavbar = () => {
         display: 'flex',
         justifyContent: 'space-between',
       }}>
-      <h1>
-        seg<span>Dattax</span>
-      </h1>
+      <Typography
+        component={'p'}
+        sx={{
+          display: 'flex',
+          fontSize: '2rem',
+        }}>
+        seg
+        <Typography component={'span'} sx={{fontSize: '2rem', color: '#f00'}}>
+          Dattax
+        </Typography>
+      </Typography>
       <Box
         component='ul'
         sx={{
