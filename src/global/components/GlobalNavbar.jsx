@@ -33,6 +33,10 @@ export const GlobalNavbar = () => {
       <Button
         sx={{
           maxHeight: '80px',
+          display: {
+            xs: 'block',
+            md: 'none',
+          },
         }}
         onClick={handleNavbar}>
         <MenuIcon />
