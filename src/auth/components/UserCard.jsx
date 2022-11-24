@@ -3,7 +3,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {LazyLoadImage} from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import {useRoutesNavigate} from '../../global/hooks'
-import {startLogout} from '../../context/slices/auth'
+import {startLogout} from '../../context/slices/auth/thunks'
 
 export const UserCard = () => {
   const {photoURL, displayName} = useSelector((state) => state.auth)
