@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material'
-import { red } from '@mui/material/colors'
+import { grey, red } from '@mui/material/colors'
 
 export const cattpuccinTheme = createTheme({
   palette: {
@@ -12,5 +12,18 @@ export const cattpuccinTheme = createTheme({
     error: {
       main: red.A400,
     },
+    info:{
+      main:'#89b4fa'
+    },
+    success:{
+      main:'#a6e3a1'
+    },
+    grey:{
+      main: '#6c7086'	
+    },
+    text:{
+      main: '#181825'
+    }
+    
   },
 })
