@@ -1,18 +1,23 @@
 import {Grid, Typography} from '@mui/material'
 import {useSelector} from 'react-redux'
+import {AddField, FieldsList} from '../components'
 
 export const HomePage = () => {
   const {displayName} = useSelector((state) => state.auth)
 
   return (
-    <Grid container>
-      <Grid item>
+    <Grid container flex justifyContent={'center'}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          textAlign: 'center',
+        }}>
         <Typography>
           Bienvenido
           <Typography
             sx={{
               color: 'secondary.main',
-              // fontWeight: 700,
               ml: 0.5,
             }}
             component={'span'}>
@@ -20,7 +25,18 @@ export const HomePage = () => {
           </Typography>
         </Typography>
       </Grid>
-      <Grid item>Esta es la información que manejas de tus usuarios</Grid>
+      <Grid item xs={12}>
+        <Typography
+          sx={{
+            textAlign: 'center',
+          }}>
+          ¿Qué es lo que deseas hacer?
+        </Typography>
+      </Grid>
+      <Grid item>
+        <AddField />
+        <FieldsList />
+      </Grid>
     </Grid>
   )
 }

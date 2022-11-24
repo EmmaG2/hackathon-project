@@ -20,7 +20,6 @@ export const UserCard = () => {
       flex
       justifyContent={'center'}
       sx={{
-        // border: '1px solid red',
         borderRadius: '5px',
         p: 2,
         boxShadow:
