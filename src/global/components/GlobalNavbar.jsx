@@ -20,7 +20,7 @@ export const GlobalNavbar = () => {
         justifyContent: 'space-between',
         px: 2,
       }}>
-      <Link to='/landing/home'>
+      <Link to='/app/home'>
         <Typography
           sx={{
             fontSize: '2rem',

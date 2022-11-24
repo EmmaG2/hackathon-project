@@ -104,9 +104,9 @@ export const AddField = () => {
                 mt: 2,
                 mb: 2,
               }}
-              error={!!errors?.value}
-              helperText={errors?.value ? errors.value.message : null}
-              {...register('value', {
+              error={!!errors?.isPrimary}
+              helperText={errors?.isPrimary ? errors.isPrimary.message : null}
+              {...register('isPrimary', {
                 required: 'Este campo es obligatorio',
                 min: {
                   value: 4,
