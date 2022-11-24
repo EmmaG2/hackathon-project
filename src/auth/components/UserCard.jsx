@@ -1,10 +1,18 @@
 import {Button, Grid, Typography} from '@mui/material'
-import {useSelector} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import {LazyLoadImage} from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
+import {useRoutesNavigate} from '../../global/hooks'
+import {startLogout} from '../../context/slices/auth'
 
 export const UserCard = () => {
-  const {email, photoURL, displayName} = useSelector((state) => state.auth)
+  const {photoURL, displayName} = useSelector((state) => state.auth)
+  const {onNavigateTo} = useRoutesNavigate()
+  const dispatch = useDispatch()
+  const onLogout = () => {
+    console.log('working')
+    dispatch(startLogout())
+  }
 
   return (
     <Grid
@@ -76,6 +84,7 @@ export const UserCard = () => {
           sx={{
             mt: 2,
           }}
+          onClick={() => onNavigateTo('/app/home')}
           variant={'contained'}>
           Entrar como usuario
         </Button>
@@ -85,8 +94,20 @@ export const UserCard = () => {
           sx={{
             mt: 2,
           }}
+          onClick={() => onNavigateTo('/admin/home')}
           variant={'contained'}>
           Entrar como empresa
+        </Button>
+      </Grid>
+      <Grid item xs={12}>
+        <Button
+          sx={{
+            mt: 2,
+          }}
+          onClick={onLogout}
+          color='error'
+          variant={'contained'}>
+          Cerrar sesión
         </Button>
       </Grid>
     </Grid>
