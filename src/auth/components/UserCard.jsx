@@ -70,12 +70,23 @@ export const UserCard = () => {
         <Typography>
           Ingeresa a la aplicación haciendo click en el siguiente botón
         </Typography>
+      </Grid>
+      <Grid item xs={12}>
         <Button
           sx={{
             mt: 2,
           }}
           variant={'contained'}>
-          Entrar
+          Entrar como usuario
+        </Button>
+      </Grid>
+      <Grid item xs={12}>
+        <Button
+          sx={{
+            mt: 2,
+          }}
+          variant={'contained'}>
+          Entrar como empresa
         </Button>
       </Grid>
     </Grid>
