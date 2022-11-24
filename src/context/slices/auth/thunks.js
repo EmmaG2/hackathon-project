@@ -1,5 +1,5 @@
-import { signInWithGoogle } from '../../../firebase'
-import { checkingCredentials, login, logout } from './authSlice'
+import {onLogoutFirebase, signInWithGoogle} from '../../../firebase'
+import {checkingCredentials, login, logout} from './authSlice'
 
 export const checkingAuthentication = () => {
   return async (dispatch) => {
@@ -15,5 +15,13 @@ export const startGoogleSignIn = () => {
     if (!res.ok) return dispatch(logout(res.errorMessage))
 
     dispatch(login(res))
+  }
+}
+
+export const startLogout = () => {
+  return async (dispatch) => {
+    await onLogoutFirebase()
+
+    dispatch(logout({}))
   }
 }
