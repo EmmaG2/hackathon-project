@@ -8,9 +8,15 @@ export const FieldsList = () => {
   return (
     <div>
       {fields.map((i) => (
-        <Box>
-          <Typography>{i.id}</Typography>
-          <Typography>{i.type}</Typography>
+        <Box
+          sx={{
+            m: 3,
+          }}
+          key={i.id}>
+          <Typography>Id: {i.id}</Typography>
+          <Typography>Tipo: {i.type}</Typography>
+          <Typography>Nombre: {i.name}</Typography>
+          <Typography>Valor: {i.value}</Typography>
         </Box>
       ))}
     </div>
