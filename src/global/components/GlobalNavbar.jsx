@@ -1,4 +1,4 @@
-import {Box, Button, Menu, Typography} from '@mui/material'
+import {Box, Button, IconButton, Menu, Typography} from '@mui/material'
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu'
@@ -17,26 +17,43 @@ export const GlobalNavbar = () => {
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
+        px: 2,
       }}>
-      <h1>
-        Seg
+      <Link to='/landing/home'>
         <Typography
-          component='span'
-          fontWeight={'700'}
           sx={{
-            color: 'primary.main',
             fontSize: '2rem',
+            color: '#000',
           }}>
-          Dattax
+          Seg
+          <Typography
+            component='span'
+            fontWeight={'700'}
+            sx={{
+              color: 'primary.main',
+              fontSize: '2rem',
+            }}>
+            Dattax
+          </Typography>
         </Typography>
-      </h1>
-      <Button
+      </Link>
+      <Box
         sx={{
-          maxHeight: '80px',
+          display: 'flex',
         }}
-        onClick={handleNavbar}>
-        <MenuIcon />
-      </Button>
+        justifyContent
+        alignItems='center'>
+        <IconButton
+          sx={{
+            display: {
+              xs: 'block',
+              md: 'none',
+            },
+          }}
+          onClick={handleNavbar}>
+          <MenuIcon />
+        </IconButton>
+      </Box>
       <Box
         component='ul'
         sx={{
@@ -88,6 +105,7 @@ export const GlobalNavbar = () => {
           },
           backgroundColor: '#fff',
           p: 2,
+          zIndex: 10,
         }}>
         <Box
           component='li'
