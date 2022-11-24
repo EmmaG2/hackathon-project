@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { AUTH_STATUS } from './authStatus'
+import {createSlice} from '@reduxjs/toolkit'
+import {AUTH_STATUS} from './authStatus'
 
 const initialState = {
   status: AUTH_STATUS.notAuthenticated,
@@ -23,8 +23,12 @@ export const authSlice = createSlice({
       state.errorMessage = null
     },
     logout: (state, action) => {
-      initialState
-      state.errorMessage = action.payload.errorMessage
+      state.status = AUTH_STATUS.notAuthenticated
+      state.uid = null
+      state.email = null
+      state.displayName = null
+      state.displayName = null
+      state.errorMessage = action.payload?.errorMessage
     },
     checkingCredentials: (state) => {
       state.status = AUTH_STATUS.checking
@@ -32,4 +36,4 @@ export const authSlice = createSlice({
   },
 })
 
-export const { login, logout, checkingCredentials } = authSlice.actions
+export const {login, logout, checkingCredentials} = authSlice.actions
