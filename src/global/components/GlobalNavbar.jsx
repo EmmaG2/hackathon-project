@@ -98,7 +98,7 @@ export const GlobalNavbar = () => {
           },
           position: 'absolute',
           width: '100%',
-          heigth: '22rem',
+          heigth: '32rem',
           mt: '5rem',
           flexDirection: {
             xs: 'column',
@@ -111,6 +111,7 @@ export const GlobalNavbar = () => {
           component='li'
           sx={{
             mx: 2,
+            my: 1,
           }}>
           <Link onClick={handleNavbar} to={'/app/home'}>
             Home
@@ -120,6 +121,7 @@ export const GlobalNavbar = () => {
           component='li'
           sx={{
             mx: 2,
+            my: 1,
           }}>
           <Link onClick={handleNavbar} to={'/landing/about'}>
             About
@@ -129,6 +131,7 @@ export const GlobalNavbar = () => {
           component='li'
           sx={{
             mx: 2,
+            my: 1,
           }}>
           <Link onClick={handleNavbar} to={'/auth/register'}>
             Register
