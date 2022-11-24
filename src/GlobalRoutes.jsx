@@ -1,6 +1,6 @@
 import {Box} from '@mui/material'
-import React from 'react'
 import {Route, Routes} from 'react-router-dom'
+import {AdminRouter} from './admin/routes'
 import {AppRoutes} from './app/routes'
 import {AuthRouter} from './auth/routes'
 import {GlobalNavbar} from './global/components'
@@ -19,6 +19,7 @@ export const GlobalRoutes = () => {
           <Route path='/app/*' element={<AppRoutes />} />
           <Route path='/landing/*' element={<LandingRouter />} />
           <Route path='/auth/*' element={<AuthRouter />} />
+          <Route path='/admin/*' element={<AdminRouter />} />
         </Routes>
       </Box>
     </>
