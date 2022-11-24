@@ -4,9 +4,17 @@ import React from 'react'
 export const DataLayout = ({children}) => {
   return (
     <Grid container>
-      <Typography component={'h1'}>{title}</Typography>
+      <Grid item xs={12}>
+        <Typography
+          component={'h1'}
+          sx={{
+            fontSize: '2rem',
+          }}>
+          Esta es tu data:
+        </Typography>
+      </Grid>
 
-      {children}
+      <Grid item>{children}</Grid>
     </Grid>
   )
 }
