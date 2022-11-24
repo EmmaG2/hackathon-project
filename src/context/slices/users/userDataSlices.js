@@ -14,11 +14,10 @@ const initialState = {
         isOlderAge: true,
         isUsable: true
     },
-    
 
 };
 
-export const sliceName = createSlice({
+export const userDataSlice = createSlice({
   name: 'name',
   initialState,
   reducers: {
@@ -28,6 +27,6 @@ export const sliceName = createSlice({
   },
 });
 
-export const { reducerName } = sliceName.actions;
+export const { reducerName } = userDataSlice.actions;
 
-export default sliceName.reducer;
+export default userDataSlice.reducer;
