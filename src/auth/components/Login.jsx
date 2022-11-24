@@ -20,16 +20,14 @@ export const Login = () => {
         heigth: '100%',
       }}>
       <Typography component='h1' fontSize={25} mb={5}>
-        Registro
+        Por favor, haz sesion con Google
       </Typography>
 
       <Box w={100}>
-        <Button
-          sx={{mr: 1}}
-          onClick={onGoogleSignIn}
-          variant='outlined'
-          color='primary'>
-          Google
+        <Button onClick={onGoogleSignIn} variant='outlined' color='primary'>
+          <img
+            src='https://www.freepngimg.com/thumb/google/67058-logo-search-google-icon-free-clipart-hq.png'
+            width={60}></img>
         </Button>
       </Box>
     </Grid>

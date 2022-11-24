@@ -14,6 +14,7 @@ export const GlobalNavbar = () => {
   return (
     <Box
       component='nav'
+      backgroundColor='#bac2de'
       sx={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -99,7 +100,7 @@ export const GlobalNavbar = () => {
           position: 'absolute',
           width: '100%',
           heigth: '32rem',
-          mt: '5rem',
+          mt: '4rem',
           flexDirection: {
             xs: 'column',
           },

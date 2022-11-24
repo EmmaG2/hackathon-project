@@ -40,7 +40,9 @@ export const HomePage = () => {
   return (
     <Grid container>
       <Grid xs={12} item>
-        <Typography component='h1'>Bienvenido</Typography>
+        <Typography component='h1' fontSize={30}>
+          Bienvenido
+        </Typography>
       </Grid>
       <Grid xs={12} item>
         <Typography component='h1'>Esta es tu información</Typography>
@@ -58,11 +60,21 @@ export const HomePage = () => {
               component='li'
               sx={{
                 mt: 5,
-              }}>
+                boxShadow:
+                  'rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px, rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px',
+                borderRadius: '5px',
+              }}
+              p={2}>
               <Typography component={'p'}>Dato: {i.field}</Typography>
               <Typography component={'p'}>tipo: {i.type}</Typography>
               <Typography component={'p'}>valor: {i.value}</Typography>
-              <Button variant='outlined' onClick={() => handleRemoveItem(i.id)}>
+              <Button
+                variant={'contained'}
+                sx={{
+                  mt: '10px',
+                }}
+                color='error'
+                onClick={() => handleRemoveItem(i.id)}>
                 Denegar acceso
               </Button>
             </Box>
