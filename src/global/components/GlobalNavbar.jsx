@@ -11,10 +11,13 @@ export const GlobalNavbar = () => {
         justifyContent: 'space-between',
       }}>
       <h1>
-        seg
+        Seg
         <Typography
+          component='span'
+          fontWeight={'700'}
           sx={{
             color: 'primary.main',
+            fontSize: '2rem',
           }}>
           Dattax
         </Typography>
