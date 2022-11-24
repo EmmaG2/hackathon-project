@@ -11,8 +11,9 @@ export const GlobalNavbar = () => {
         justifyContent: 'space-between',
       }}>
       <h1>
-        seg
+        Seg
         <Typography
+          component='span'
           sx={{
             color: 'primary.main',
           }}>
