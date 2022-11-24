@@ -4,10 +4,12 @@ export const appSlice = createSlice({
   name: 'app',
   initialState: [],
   reducers: {
-    createField: (state, {payload}) => {
+    createField: (state, action) => {
       const newField = {
-        id: new Date(),
-        type: payload.type,
+        id: new Date().toDateString(),
+        type: action.payload.type,
+        value: action.payload.value,
+        name: action.payload.name,
       }
 
       state.push(newField)

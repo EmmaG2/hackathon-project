@@ -30,7 +30,7 @@ export const HomePage = () => {
           sx={{
             textAlign: 'center',
           }}>
-          ¿Qué es lo que deseas hacer?
+          Ingresa la información que necesita para su producto o servicio
         </Typography>
       </Grid>
       <Grid item>
