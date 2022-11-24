@@ -1,12 +1,10 @@
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {Grid, Typography, Box, Button} from '@mui/material'
 import React from 'react'
 import {startGoogleSignIn} from '../../context/slices/auth'
 
 export const Login = () => {
   const dispatch = useDispatch()
-  const {status} = useSelector((state) => state.auth)
-
   const onGoogleSignIn = () => {
     dispatch(startGoogleSignIn())
   }
