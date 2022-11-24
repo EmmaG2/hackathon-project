@@ -24,7 +24,6 @@ export const GlobalNavbar = () => {
       <Box
         component='ul'
         sx={{
-          dislay: 'flex !important',
           justifyContent: 'center',
           alignItems: 'center',
         }}>
