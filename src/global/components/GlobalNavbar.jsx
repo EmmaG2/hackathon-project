@@ -1,4 +1,4 @@
-import {Box} from '@mui/material'
+import {Box, Typography} from '@mui/material'
 import React from 'react'
 import {Link} from 'react-router-dom'
 
@@ -11,7 +11,13 @@ export const GlobalNavbar = () => {
         justifyContent: 'space-between',
       }}>
       <h1>
-        seg<span>Dattax</span>
+        seg
+        <Typography
+          sx={{
+            color: 'primary.main',
+          }}>
+          Dattax
+        </Typography>
       </h1>
       <Box
         component='ul'
