@@ -1,12 +1,26 @@
-import {Grid, TextField, Typography, Box, Button} from '@mui/material'
+import {useDispatch, useSelector} from 'react-redux'
+import {Grid, Typography, Box, Button} from '@mui/material'
 import React from 'react'
+import {startGoogleSignIn} from '../../context/slices/auth'
 
-export default function Login() {
+export const Login = () => {
+  const dispatch = useDispatch()
+  const {status} = useSelector((state) => state.auth)
+
+  const onGoogleSignIn = () => {
+    dispatch(startGoogleSignIn())
+  }
+
   return (
-    <Grid justifyContent="center" align='center' item xs={12} md={6} sx={{
-        heigth: '100%'
-    }}
-    >
+    <Grid
+      justifyContent='center'
+      align='center'
+      item
+      xs={12}
+      md={6}
+      sx={{
+        heigth: '100%',
+      }}>
       <Typography component='h1' fontSize={25} mb={5}>
         Registro
       </Typography>
@@ -14,7 +28,7 @@ export default function Login() {
       <Box w={100}>
         <Button
           sx={{mr: 1}}
-          type='submit'
+          onClick={onGoogleSignIn}
           variant='outlined'
           color='primary'>
           Google
